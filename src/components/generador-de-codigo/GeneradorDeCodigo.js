@@ -26,15 +26,6 @@ export class GeneradorDeCodigo extends LitElement {
       main {
         flex-grow: 1;
       }
-
-      .app-footer {
-        font-size: calc(12px + 0.5vmin);
-        align-items: center;
-      }
-
-      .app-footer a {
-        margin-left: 5px;
-      }
     `;
   }
 
@@ -50,16 +41,6 @@ export class GeneradorDeCodigo extends LitElement {
 
         <p>Edit <code>src/GeneradorDeCodigo.js</code> and save to reload.</p>
       </main>
-
-      <p class="app-footer">
-        🚽 Made with love by
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://github.com/open-wc"
-          >open-wc</a
-        >.
-      </p>
     `;
   }
 }

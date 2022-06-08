@@ -5,6 +5,9 @@ import { importMetaAssets } from '@web/rollup-plugin-import-meta-assets';
 import { terser } from 'rollup-plugin-terser';
 import { generateSW } from 'rollup-plugin-workbox';
 import path from 'path';
+import scss from 'rollup-plugin-scss'
+import autoprefixer from 'autoprefixer'
+import postcss from 'postcss'
 
 export default {
   input: 'index.html',
@@ -78,5 +81,14 @@ export default {
       skipWaiting: true,
       clientsClaim: true,
     }),
+    scss({
+      processor: css => postcss([autoprefixer])
+        .process(css)
+        .then(result => result.css),
+      includePaths: [
+        path.join(__dirname, '../../node_modules/'),
+        'node_modules/'
+      ]
+    })
   ],
 };
