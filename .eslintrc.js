@@ -43,5 +43,6 @@ module.exports = {
     "operator-assignment": 'off',
     "import/order": 'off',
     "no-plusplus": "off",
+    "parser": "@babel/eslint-parser",
   }
 }
