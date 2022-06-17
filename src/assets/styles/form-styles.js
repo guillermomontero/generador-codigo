@@ -33,6 +33,26 @@ export const formStyles = css`
     justify-content: flex-start;
   }
 
+  .form-file__icon {
+    width: 30px;
+    height: auto;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .form-file__icon img {
+    width: 100%;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: all ease 0.2s;
+  }
+
+  .form-file__icon img:hover {
+    opacity: 0.6;
+  }
+
   .form-contain {
     position: relative;
     margin: 0 0 1em 0;
